@@ -110,4 +110,4 @@ finally {
     }
     finally { if (e_1) throw e_1.error; }
 }
-//# sourceMappingURL=tutorial-es6.js.map
+//# sourceMappingURL=tutorial-es6-generator.js.map

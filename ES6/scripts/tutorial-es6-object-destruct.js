@@ -1,3 +1,19 @@
+var __read = (this && this.__read) || function (o, n) {
+    var m = typeof Symbol === "function" && o[Symbol.iterator];
+    if (!m) return o;
+    var i = m.call(o), r, ar = [], e;
+    try {
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
+    }
+    catch (error) { e = { error: error }; }
+    finally {
+        try {
+            if (r && !r.done && (m = i["return"])) m.call(i);
+        }
+        finally { if (e) throw e.error; }
+    }
+    return ar;
+};
 var _a;
 var firstName = "Chandler";
 var lastName = "Bing";
@@ -40,12 +56,12 @@ var person3 = (_a = {
 console.log(person3);
 //destruct array
 var employee = ["Joey", "Tribianni", "Male"];
-var fname = employee[0], lname = employee[1], gender = employee[2];
+var _b = __read(employee, 3), fname = _b[0], lname = _b[1], gender = _b[2];
 console.log(fname, lname, gender);
-var firstN = employee[0], elements = employee.slice(1);
+var _c = __read(employee), firstN = _c[0], elements = _c.slice(1);
 console.log(firstN, elements);
 var employee2 = ["Joey", "Tribianni",];
-var fn2 = employee2[0], ln2 = employee2[1], _b = employee2[2], gender2 = _b === void 0 ? "M" : _b;
+var _d = __read(employee2, 3), fn2 = _d[0], ln2 = _d[1], _e = _d[2], gender2 = _e === void 0 ? "M" : _e;
 console.log(fn2, ln2, gender2);
 //destruct object
 var empObj = {
